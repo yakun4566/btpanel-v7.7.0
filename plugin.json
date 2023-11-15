@@ -3213,6 +3213,20 @@
 			"count": 0,
 			"versions": [
 				{
+					"id": 495,
+					"soft_id": 143,
+					"m_version": "1",
+					"version": "8",
+					"dependnet": "",
+					"mem_limit": 32,
+					"cpu_limit": 1,
+					"update_msg": "【调整】更换国际版连接密钥",
+					"os_limit": 0,
+					"beta": 0,
+					"update_time": 1692262235,
+					"setup": true
+				},
+				{
 					"m_version": "1",
 					"version": "4",
 					"dependnet": "",

@@ -26,14 +26,19 @@ sed -i "s|bind_user == 'True'|bind_user == 'XXXX'|" /www/server/panel/BTPanel/st
 ```
 rm -f /www/server/panel/data/bind.pl
 ```
+3, 从远程更新plugin.json配置文件
+```
+wget https://raw.githubusercontent.com/yakun4566/btpanel-v7.7.0/main/plugin.json -O /www/server/panel/data/plugin.json
+```
 
-3，手动解锁宝塔所有付费插件为永不过期
+4，手动解锁宝塔所有付费插件为永不过期
 
 文件路径：`/www/server/panel/data/plugin.json`
 
 搜索字符串：`"endtime": -1`全部替换为`"endtime": 999999999999`
+搜索字符串：`"endtime": 0`全部替换为`"endtime": 999999999999`
 
-4，给plugin.json文件上锁防止自动修复为免费版
+5，给plugin.json文件上锁防止自动修复为免费版,-i是去掉锁
 
 ```
 chattr +i /www/server/panel/data/plugin.json
